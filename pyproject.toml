@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: GARDENA GmbH
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coap_transport_proxy"
+version = "0.2.0"
+description = "A custom proxy server allowing clients to open TCP sockets with optional TLS encryption using the CoAP protocol."
+requires-python = ">=3.8"
+dependencies = [
+    "aiocoap~=0.4.5",
+]
+
+[project.optional-dependencies]
+test = [
+    "coverage~=7.2.7",
+    "pytest~=7.4.0",
+    "pytest-asyncio~=0.21.0",
+    "pytest-cov~=4.1.0",
+]
+azure-pipelines = [
+    "pytest-azurepipelines~=1.0.4",
+]
+
+[project.scripts]
+coap-transport-proxy = "coap_transport_proxy.server:main"
