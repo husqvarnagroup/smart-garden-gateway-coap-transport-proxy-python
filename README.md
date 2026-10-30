@@ -1,5 +1,8 @@
 # CoAP Transport Proxy
 
+> This code is not used in production anymore. We provide it only for
+> reference.
+
 ## Development Setup
 
 ### Python Version
